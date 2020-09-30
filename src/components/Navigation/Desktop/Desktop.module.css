@@ -1,0 +1,90 @@
+.desktop__navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.desktop__navigation ul{
+  margin: 0 5px;
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 84px;
+}
+.desktop__navigation ul li{
+    height: inherit;
+    padding: 0 5px;
+    transition: 0.3s ease-in background;
+}
+.desktop__navigation ul li:hover{
+    background: var(--blueColor);
+}
+.desktop__navigation ul li:hover>a{
+    color: #fff
+}
+.desktop__navigation ul li a, .navbar__search{
+    font-size: .95rem;
+    height: 84px;
+    display: flex;
+    align-items: center;
+}
+.desktop__navigation ul li:not(:last-of-type){
+    margin-right: 2%;
+}
+.navbar__search, .navbar__logo{
+  flex: 1;
+}
+.navbar__search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: fit-content;
+}
+.navbar__logo{
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--blueColor);
+    max-width: fit-content;
+    margin-right: 10px;
+}
+.navbar__logo span{
+    color: red;
+}
+.btn__register{
+    border: 1px solid var(--blueColor);
+    padding: 6px 16px;
+    border-radius: 25px;
+    transition: all .4s ease;
+}
+.btn__register:hover{
+    background: var(--blueColor);
+    color: #fff;
+}
+.btn__signIn{
+    margin: 0 3px;
+    border-bottom: 5px solid transparent;
+    margin-top: 6px;
+}
+.btn__signIn:hover{
+    border-bottom: 5px solid var(--blueColor);
+}
+.search__icon{
+    cursor: pointer;
+        box-sizing: content-box;
+        padding: 12px;
+        border-radius: 50%;
+        color: #009fe3;
+}
+.search__icon:hover{
+    background: #009fe3c0;
+    color: #fff!important;
+    transition: .4s ease-in-out background;
+}
+
+@media only screen and (min-width:1100px){
+  .desktop__navigation ul li a, .navbar__search{
+    font-size: 1.1rem;
+}
+}
