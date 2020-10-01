@@ -1,90 +1,132 @@
-.desktop__navigation{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.desktop__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: inherit;
+  width: 80vw;
+  margin: 0 auto;
 }
-.desktop__navigation ul{
-  margin: 0 5px;
+.dropdown__container {
+  background: #fff;
+  border-top: var(--blueColor);
+  border-top: none;
+  min-width: 60vw;
+  min-height: 400px;
+  position: absolute;
+  top: 84px;
+  left: 15vw;
+  -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.75);
+  border-top: 5px solid var(--blueColor);
+  padding: 10px;
+  display: none;
+}
+.desktop__navigation ul {
   flex: 4;
   display: flex;
-  justify-content: center;
   align-items: center;
   list-style: none;
   height: 84px;
 }
-.desktop__navigation ul li{
-    height: inherit;
-    padding: 0 5px;
-    transition: 0.3s ease-in background;
+.desktop__navigation ul li {
+  height: inherit;
+  transition: 0.2s ease background;
+  text-align: center;
 }
-.desktop__navigation ul li:hover{
-    background: var(--blueColor);
+.desktop__navigation ul li:hover {
+  background: var(--blueColor);
 }
-.desktop__navigation ul li:hover>a{
-    color: #fff
+.desktop__navigation ul li:hover > a {
+  color: #fff;
 }
-.desktop__navigation ul li a, .navbar__search{
-    font-size: .95rem;
-    height: 84px;
-    display: flex;
-    align-items: center;
+.desktop__navigation ul li a,
+.navbar__search {
+  font-size: 0.95rem;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  color: var(--darkGray);
 }
-.desktop__navigation ul li:not(:last-of-type){
-    margin-right: 2%;
+.desktop__navigation ul li {
+  padding: 0 6px;
 }
-.navbar__search, .navbar__logo{
+.desktop__navigation ul li:first-of-type{
+    padding-left: 6px;
+}
+.desktop__navigation ul li:last-of-type{
+    padding-left: 12px;
+}
+.navbar__search,
+.navbar__logo {
   flex: 1;
 }
-.navbar__search{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: fit-content;
+.navbar__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: fit-content;
 }
-.navbar__logo{
-    font-family: 'Caveat', cursive;
-    font-weight: 600;
-    font-size: 32px;
-    color: var(--blueColor);
-    max-width: fit-content;
-    margin-right: 10px;
+.navbar__logo {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 36px;
+  color: var(--blueColor);
+  margin-right: 20px;
+  /* box-shadow: 0 0 6px -2px; */
+  padding: 2px 5px;
+  border-radius: 5px;
 }
-.navbar__logo span{
-    color: red;
+.navbar__logo span {
+  color: red;
 }
-.btn__register{
-    border: 1px solid var(--blueColor);
-    padding: 6px 16px;
-    border-radius: 25px;
-    transition: all .4s ease;
+.btn__register {
+  border: 1px solid var(--blueColor);
+  padding: 6px 16px;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+  color: var(--darkGray);
 }
-.btn__register:hover{
-    background: var(--blueColor);
-    color: #fff;
+.btn__register:hover {
+  background: var(--blueColor);
+  color: #fff;
 }
-.btn__signIn{
-    margin: 0 3px;
-    border-bottom: 5px solid transparent;
-    margin-top: 6px;
+.btn__signIn {
+  margin: 0 3px;
+  border-bottom: 5px solid transparent;
+  margin-top: 6px;
+  color: var(--darkGray);
 }
-.btn__signIn:hover{
-    border-bottom: 5px solid var(--blueColor);
+.btn__signIn:hover {
+  border-bottom: 5px solid var(--blueColor);
 }
-.search__icon{
-    cursor: pointer;
-        box-sizing: content-box;
-        padding: 12px;
-        border-radius: 50%;
-        color: #009fe3;
+.search__icon {
+  cursor: pointer;
+  box-sizing: content-box;
+  padding: 12px;
+  border-radius: 50%;
+  color: #009fe3;
 }
-.search__icon:hover{
-    background: #009fe3c0;
-    color: #fff!important;
-    transition: .4s ease-in-out background;
+.search__icon:hover {
+  background: #009fe3c0;
+  color: #fff !important;
+  transition: 0.4s ease-in-out background;
 }
 
-@media only screen and (min-width:1100px){
-  .desktop__navigation ul li a, .navbar__search{
-    font-size: 1.1rem;
+@media only screen and (min-width: 1125px) {
+  .desktop__navigation ul li a,
+  .navbar__search {
+    font-size: 1rem;
+  }
 }
+
+@media only screen and (max-width: 1200px) {
+  .desktop__navigation {
+    width: 85vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .desktop__navigation {
+    width: 90vw;
+  }
 }

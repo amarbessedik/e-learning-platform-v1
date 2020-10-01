@@ -1,0 +1,28 @@
+.programs__degrees__container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: var(--darkGray);
+}
+.programs__degrees__header{
+    padding: 15px;
+    border-bottom: 2px solid var(--blueColor);
+    margin-bottom: 15px;
+}
+.programs__degrees__header h2{
+    color: var(--blueColor);
+}
+.programs__degrees__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    font-size: .9rem;
+}
+.degrees a{   
+ color: var(--blueColor);
+}
+.degrees a:hover{
+    text-decoration: underline;
+}
+
