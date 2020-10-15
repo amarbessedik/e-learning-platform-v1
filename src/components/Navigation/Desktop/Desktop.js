@@ -35,7 +35,8 @@ const Desktop = () => {
     <div className={styles.desktop__navigation}>
       <div className={styles.navbar__logo__wrapper}>
         <Link className={styles.navbar__logo} to="/">
-          <span>e</span>Learn<SchoolIcon />
+          <span>e</span>Learn
+          <SchoolIcon />
         </Link>
       </div>
       <ul>

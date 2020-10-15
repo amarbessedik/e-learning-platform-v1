@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: inherit;
-  width: 80vw;
+  width: 85vw;
   margin: 0 auto;
 }
 .dropdown__container {
@@ -26,6 +26,7 @@
   flex: 4;
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style: none;
   height: 84px;
 }
@@ -42,17 +43,17 @@
 }
 .desktop__navigation ul li a,
 .navbar__search {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   height: 84px;
   display: flex;
   align-items: center;
   color: var(--darkGray);
 }
 .desktop__navigation ul li {
-  padding: 0 6px;
+  padding: 0 5px;
 }
 .desktop__navigation ul li:first-of-type{
-    padding-left: 6px;
+    padding-left: 5px;
 }
 .desktop__navigation ul li:last-of-type{
     padding-left: 12px;
@@ -61,6 +62,7 @@
 .navbar__logo {
   flex: 1;
 }
+
 .navbar__search {
   display: flex;
   justify-content: space-between;
@@ -72,9 +74,7 @@
   font-weight: 500;
   font-size: 36px;
   color: var(--blueColor);
-  margin-right: 20px;
-  /* box-shadow: 0 0 6px -2px; */
-  padding: 2px 5px;
+  margin-right: 10px;
   border-radius: 5px;
 }
 .navbar__logo span {
@@ -82,7 +82,7 @@
 }
 .btn__register {
   border: 1px solid var(--blueColor);
-  padding: 6px 16px;
+  padding: 5px 15px;
   border-radius: 25px;
   transition: all 0.4s ease;
   color: var(--darkGray);
@@ -116,7 +116,7 @@
 @media only screen and (min-width: 1125px) {
   .desktop__navigation ul li a,
   .navbar__search {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
@@ -128,5 +128,9 @@
 @media only screen and (max-width: 900px) {
   .desktop__navigation {
     width: 90vw;
+  }
+    .desktop__navigation ul li a,
+  .navbar__search {
+    font-size: .5rem;
   }
 }

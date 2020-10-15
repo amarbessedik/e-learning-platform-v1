@@ -3,7 +3,7 @@
     flex-direction: column;
     flex: 1;
     color: var(--darkGray);
-}
+} 
 
 .courses__container__header{
     border-bottom: 2px solid var(--blueColor);
@@ -39,12 +39,13 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    height: fit-content
 }
 .course__link ul li{
     width: 100%;
 }
 .course__link ul li a{
-    padding: 3px 0 0 4px;
+    padding: 4px 0 0 4px;
     height: unset;
     width: 100%;
     text-align: left;
@@ -54,4 +55,17 @@
 .course__link ul li:first-of-type, 
 .course__link ul li:last-of-type{
     padding: unset;
+}
+.last__link{
+    border-bottom: 2px solid var(--blueColor);
+    width: fit-content!important;
+}
+.last__link:hover{
+  background: unset!important;
+}
+.last__link a{
+    margin-top: 25px;
+}
+.last__link:hover a{
+    color: var(--blueColor)!important;
 }

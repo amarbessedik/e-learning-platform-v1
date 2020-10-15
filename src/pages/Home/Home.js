@@ -1,4 +1,7 @@
 import React from 'react';
+import Hero from '../../components/Hero/Hero';
+import SubjectList from '../../components/Subjects/SubjectList';
+import Partners from '../../components/Partners/Partners';
 import './Home.css';
 
 const Home = () => {
@@ -6,16 +9,17 @@ const Home = () => {
       <div className="home">
         {/* hero with search*/}
         <div className="hero__wrapper">
-          <h1>Hero</h1>
+          <Hero />
         </div>
         {/* partners */}
         <div className="partners__wrapper">
-          <h1>Partner</h1>
+          <Partners />
         </div>
         {/* popular subjects */}
         <div className="subjects__wrapper">
-          <h1 className="">Popular subjects</h1>
-        </div> 
+          <h1 className="popular__subjects">Popular subjects</h1>
+          <SubjectList />
+        </div>
       </div>
     );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import './Courses.css';
 
 const Courses = () => {
@@ -55,7 +56,9 @@ const Courses = () => {
                     <li><Link to="/">Physics</Link></li>
                     <li><Link to="/">Science</Link></li>
                     <li><Link to="/">Social Sciences</Link></li>
-                    <li><Link to="/">All Subjects</Link></li>
+                    <li className='last__link'>
+                        <Link to="/">All Subjects <DoubleArrowIcon /></Link>
+                    </li>
 
                 </ul>
             </div>
