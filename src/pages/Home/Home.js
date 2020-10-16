@@ -17,7 +17,7 @@ const Home = () => {
         </div>
         {/* popular subjects */}
         <div className="subjects__wrapper">
-          <h1 className="popular__subjects">Popular subjects</h1>
+          <h2 className="popular__subjects">Popular subjects</h2>
           <SubjectList />
         </div>
       </div>

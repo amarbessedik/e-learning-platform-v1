@@ -6,6 +6,9 @@
   border-top: none;
   margin-top: 20px;
 }
+.card__header:hover {
+  background: #065683;
+}
 .card__header {
   display: flex;
   background: #02a0e4fd;
@@ -33,15 +36,32 @@
 }
 .card__list {
   padding: 30px;
-  background: #DCEEF7;
+  background: #eef1f8;
 }
 
-@media only screen and (max-width: 900px) {
+ul {
+  list-style-type: circle;
+  font-size: 0.9rem;
+}
+ul li a{
+  color: #333;
+  color: #065683;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
+.card__title a {
+  color: #fff;
+}
+.card__title a:hover {
+  color: rgb(207, 219, 245);
+}
+@media only screen and (max-width: 960px) {
   .subject__card {
-    width: 45%;
+    width: 48%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 620px) {
   .subject__card {
     width: 100%;
   }

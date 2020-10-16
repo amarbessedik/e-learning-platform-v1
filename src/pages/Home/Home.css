@@ -8,12 +8,15 @@
 .hero__wrapper{
   background-image: linear-gradient(to right, #F0F5FF, #FFF);
 }
-.subjects__wrapper{
+.subjects__wrapper{ 
   width: 85vw;
   margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.popular__subjects{
+  padding-top: 50px;
 }
 .subject__container{
   display: flex;

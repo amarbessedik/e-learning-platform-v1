@@ -21,7 +21,7 @@ const App = () => {
       {/* footer */}
       <div className="footer__wrapper">
         <Footer />
-      </div>
+      </div> 
     </div>
   );
 }

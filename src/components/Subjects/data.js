@@ -16,7 +16,8 @@ export const language =[
     'ESL',
     'Grammer',
     'Italian',
-    'MAndarin',
+    'Japanese',
+    'Mandarin',
     'Sign Language',
     'Spanish',
     'Writing'
@@ -25,6 +26,7 @@ export const data_science =[
     'Artificial Intelligence',
     'Big Data',
     'Cloud Computing',
+    'Computer Programming',
     'Data Analysis',
     'Data Mining',
     'MAchine Learning',
