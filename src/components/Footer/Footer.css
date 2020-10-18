@@ -1,11 +1,11 @@
 .footer {
   width: 85vw;
-  margin: 50px auto 0;
+  margin: 80px auto 0;
   /* border: 1px solid #ccc; */
-  height: 90%;
+  height: 100%;
   color: #aaa;
   display: flex;
-  padding: 25px 0;
+  padding: 50px 0;
 }
 .footer__left,
 .footer__right {
@@ -16,6 +16,8 @@
     /* border: 1px solid #aaa; */
     border-radius: 5px;
     background: rgb(44, 44, 44);
+    height: fit-content;
+    padding: 25px;
 }
 .footer__right {
   flex: 1;
@@ -147,6 +149,7 @@
     .footer__links{
         display: flex;
         flex-direction: column;
+        padding: 0 20px;
     }
     .footer__links>*{
         padding-right: 10px;
@@ -158,6 +161,9 @@
     .download__app__links{
         display: flex;
         flex-direction: column;
+    }
+    .copy__right p{
+       font-size: .75rem;
     }
 }
 @media only screen and (max-width: 735px){

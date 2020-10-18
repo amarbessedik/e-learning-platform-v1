@@ -56,12 +56,12 @@ const Desktop = () => {
           onBlur={resetDropdown}
         >
           <Link style={degrees ? { color: "#fff" } : null} to="/">
-            <span>Programs &amp; Degrees</span>
+            <span>Programs</span>
             <ArrowDropDownIcon />
           </Link>
         </li>
         <li>
-          <Link to="/">Schools &amp; Partners</Link>
+          <Link to="/">Partners</Link>
         </li>
         <li>
           <Link to="/">eLearn for Business</Link>

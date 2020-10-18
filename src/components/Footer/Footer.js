@@ -39,13 +39,13 @@ const Footer = () => {
                 <Link to="/">About</Link>
               </li>
               <li>
-                <Link to="/">edX for Business</Link>
+                <Link to="/">eLearn for Business</Link>
               </li>
               <li>
                 <Link to="/">Affiliates</Link>
               </li>
               <li>
-                <Link to="/">Open edX</Link>
+                <Link to="/">Open eLearn</Link>
               </li>
               <li>
                 <Link to="/">Careers News</Link>
@@ -113,7 +113,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="copy__right">
-            &copy; amar bessedik. All rights reserved - 2020
+            <p>&copy; amar bessedik. All rights reserved - 2020</p>
           </div>
         </div>
       </div>

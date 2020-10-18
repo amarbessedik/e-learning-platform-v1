@@ -5,13 +5,17 @@
   overflow: hidden;
   border-top: none;
   margin-top: 20px;
+  box-shadow: 0 0 8px -4px #3E3A72;
+}
+.subject__card:hover{
+  box-shadow: 0 0 8px -2px #3E3A72;
 }
 .card__header:hover {
   background: #065683;
 }
 .card__header {
   display: flex;
-  background: #02a0e4fd;
+  background: #3E3A72;
   color: #fff;
   padding: 10px;
 }
@@ -36,7 +40,7 @@
 }
 .card__list {
   padding: 30px;
-  background: #eef1f8;
+  background: #ffffff;
 }
 
 ul {

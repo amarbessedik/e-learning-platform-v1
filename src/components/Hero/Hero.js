@@ -9,11 +9,11 @@ const Hero = () => {
         <div className="hero">
           <div className="hero__title">
             <h2>
-              Access 2500+ Online Courses from 140 Institutions. <br />
-              Start Today!
+              Access 2000+ Online Courses, Certificates, Online Degrees from
+              100+ Institutions. <br />
             </h2>
             <Link to="/" className="hero__btn">
-              Find Courses
+              Start Today
             </Link>
           </div>
           <div className="hero__image"></div>

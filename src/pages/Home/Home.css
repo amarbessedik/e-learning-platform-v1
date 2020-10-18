@@ -6,7 +6,7 @@
     margin-bottom: 5px;
 }
 .hero__wrapper{
-  background-image: linear-gradient(to right, #F0F5FF, #FFF);
+  background-image: linear-gradient(to right, #231F5E, #FFF);
 }
 .subjects__wrapper{ 
   width: 85vw;
@@ -14,6 +14,10 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.featured__wrapper{ 
+  width: 85vw;
+  margin: auto;
 }
 .popular__subjects{
   padding-top: 50px;
