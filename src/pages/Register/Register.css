@@ -1,5 +1,117 @@
 .register__page{
-    min-height: 100vh;
-    width: 90vw;
+    min-height: 50vh;
+    width: 40vw;
     margin: 0 auto;
+    /* border: 1px solid #aaa; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+.register__header{
+    margin: 25px 0;
+} 
+.register__credentials{
+    flex: 1;
+}
+.register__credentials h2{
+    color: var(--blueColor);
+    font-weight: 500;
+}
+label, input{
+    display: block;
+}
+input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding:3px;
+    line-height: 1.5rem;
+}
+.register__btn{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background: var(--blueColor);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.register__btn:hover{
+    background: #282462;
+}
+.register__social__media{
+    margin-top: 25px;
+}
+.register__form__wrapper h2{
+    text-align: center;
+    font-weight: 500;
+    margin: 15px 0;
+    color: var(--blueColor);
+}
+.register__social__media h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--blueColor);
+    font-weight: 500;
+}
+.register__btns{
+    display: flex;
+    justify-content: center;
+}
+.social__media__btn{
+    margin: 5px;
+    width: 100px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.social__media__icon{
+    margin-right: 5px;
+}
+.apple{
+    background: #000;
+}
+.facebook{
+    background: #4267B2;
+}
+.github{
+    background: #6901a5;
+}
+.twitter{
+    background: #1da1f2;
+}
+.apple:hover{
+    /* background: #444444; */
+    box-shadow: 0 0 5px 0 #000;
+}
+.facebook:hover{
+    /* background: #587cc4; */
+    box-shadow: 0 0 5px 0 #4267B2;
+}
+.github:hover{
+    /* background: #941cda; */
+    box-shadow: 0 0 8px 0 #6901a5;
+}
+.twitter:hover{
+    /* background: #53bdff; */
+    box-shadow: 0 0 5px 0 #1da1f2;
+}
+.help__link__register{
+    margin-left: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+.help__link__register:hover{
+    color: #00A0E3;
+} 
+@media only screen and (max-width: 1000px){
+    .register__page{
+    width: 75vw;
+}
 }
