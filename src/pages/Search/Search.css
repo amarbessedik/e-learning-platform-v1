@@ -1,0 +1,89 @@
+.search__page {
+  min-height: 60vh;
+  border: 1px solid;
+}
+.search__criteria__wrapper {
+  background: #1a337b;
+  background:linear-gradient(to right, #252160, #FFFFFF);
+  height: 200px;
+}
+.search__criteria {
+  width: 85vw;
+  margin: 0 auto;
+  color: #fff;
+  padding: 20px 0;
+  /* border: 1px solid red; */
+  height: 100%;
+}
+.search__icon {
+  /* border: 1px solid red; */
+  background: #fff;
+  color: #000;
+  align-self: center;
+}
+.course__search__form {
+  /* border: 1px solid red; */
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.course__search__form input {
+  display: block;
+  margin: auto;
+  border: 1px solid #fff;
+  padding: 4px;
+}
+.course__search__form input:focus {
+  outline: none;
+}
+.course__search__form button {
+  border: 1px solid;
+  padding: 8px 12px;
+  background: #23419f;
+  cursor: pointer;
+  color: #fff;
+}
+.course__search__form button:hover {
+  background: rgb(243, 93, 93);
+}
+.search__option__btn{
+    display: flex;
+}
+
+.option__wrapper button{
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    margin-right: 10px;
+    width: fit-content;
+}
+.option__wrapper{
+    flex-direction: column;
+    position: relative;
+}
+.option__dropdown{
+    border: 2px solid #0044ff;
+    min-height: 100px;
+    min-width: 200px;
+    position: absolute;
+    top: 35px;
+    background: #fff;
+    color: #000;
+}
+.option__dropdown ul{
+    list-style: none;
+    padding: 5px;
+}
+.option__dropdown ul li span{
+    display: block
+}
+.option__dropdown ul li{
+    /* display: flex; */
+    border: 1px solid;
+    text-align: left;
+}
+.option__dropdown ul li input{
+    border: 1px solid;
+}

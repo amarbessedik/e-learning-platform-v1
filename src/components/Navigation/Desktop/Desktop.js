@@ -80,7 +80,9 @@ const Desktop = () => {
         <ProgramsAndDegrees />
       </div>
       <div className={styles.navbar__search}>
-        <SearchIcon className={styles.search__icon} />
+        <Link to='/search'>
+          <SearchIcon className={styles.search__icon} />
+        </Link>
         <Link to="/signin" className={styles.btn__signIn}>
           <span>Sign In</span>
         </Link>

@@ -6,6 +6,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import SignIn from "./pages/SignIn/SignIn";
 import Register from "./pages/Register/Register";
+import Search from "./pages/Search/Search";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/signin" component={SignIn} />
         <Route path="/register" component={Register} />
+        <Route path="/search" component={Search} />
       </Switch>
       {/* footer */}
       <div className="footer__wrapper">
