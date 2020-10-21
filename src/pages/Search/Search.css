@@ -4,7 +4,7 @@
 }
 .search__criteria__wrapper {
   background: #1a337b;
-  background:linear-gradient(to right, #252160, #FFFFFF);
+  background: linear-gradient(to right, #252160, #ffffff);
   height: 200px;
 }
 .search__criteria {
@@ -48,42 +48,57 @@
 .course__search__form button:hover {
   background: rgb(243, 93, 93);
 }
-.search__option__btn{
-    display: flex;
+.search__option__btn {
+  display: flex;
 }
 
-.option__wrapper button{
-    display: flex;
-    align-items: center;
-    padding: 3px 5px;
-    margin-right: 10px;
-    width: fit-content;
+.option__wrapper button {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  margin-right: 10px;
+  width: fit-content;
 }
-.option__wrapper{
-    flex-direction: column;
-    position: relative;
+.option__wrapper {
+  flex-direction: column;
+  position: relative;
 }
-.option__dropdown{
-    border: 2px solid #0044ff;
-    min-height: 100px;
-    min-width: 200px;
-    position: absolute;
-    top: 35px;
-    background: #fff;
-    color: #000;
+.option__dropdown {
+  border: 2px solid #0044ff;
+  height: 200px;
+  min-width: 250px;
+  position: absolute;
+  top: 35px;
+  background: #fff;
+  color: #000;
+  overflow-y: scroll;
 }
-.option__dropdown ul{
-    list-style: none;
-    padding: 5px;
+.option__dropdown ul {
+  list-style: none;
+  padding: 5px;
 }
-.option__dropdown ul li span{
+/* .option__dropdown ul li>*{
     display: block
+} */
+.option__dropdown ul li {
+  display: flex;
+  padding: 5px 0;
+  align-items: center;
+  /* margin: auto; */
 }
-.option__dropdown ul li{
-    /* display: flex; */
-    border: 1px solid;
-    text-align: left;
+#checkbox {
+  display: block;
+  /* border: 1px solid red; */
 }
-.option__dropdown ul li input{
-    border: 1px solid;
+.option__dropdown ul li span {
+  /* border: 1px solid red; */
+  display: block;
+  flex: 1;
+  margin-left: 5px
+}
+.option__dropdown ul li input {
+    margin-bottom: 0px;
+    padding: 1px;
+    line-height: 1.5rem;
+    width: fit-content
 }

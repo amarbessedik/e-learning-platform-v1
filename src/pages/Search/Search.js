@@ -10,6 +10,15 @@ const Search = () => {
   const [levelDropdown, setLevelDropdown] = useState(false);
   const [availabilityDropdown, setAvailabilityDropdown] = useState(false);
   const [languageDropdown, setLanguageDropdown] = useState(false);
+
+  const resetDropdown = () => {
+      setSubjectDropdown(false);
+      setPartnerDropdown(false);
+      setProgramDropdown(false);
+      setLevelDropdown(false);
+      setAvailabilityDropdown(false);
+      setLanguageDropdown(false);
+  }
   return (
     <div className="search__page">
       <div className="search__criteria__wrapper">
@@ -27,30 +36,42 @@ const Search = () => {
           </div>
           <div className="search__dropdowns__wrapper">
             <div className="search__option__btn">
-                <SearchOption title='Subject' 
-                optionDropdown={subjectDropdown} 
+              <SearchOption
+                title="Subject"
+                optionDropdown={subjectDropdown}
                 setOptionDropdown={setSubjectDropdown}
-                options={subjects}/>
-                <SearchOption title='Partner' 
-                optionDropdown={partnerDropdown} 
+                options={subjects}
+              />
+              <SearchOption
+                title="Partner"
+                optionDropdown={partnerDropdown}
                 setOptionDropdown={setPartnerDropdown}
-                options={['option1', 'option2']}/>
-                <SearchOption title='Program' 
-                optionDropdown={programDropdown} 
+                options={["option1", "option2"]}
+              />
+              <SearchOption
+                title="Program"
+                optionDropdown={programDropdown}
                 setOptionDropdown={setProgramDropdown}
-                options={['option1', 'option2']}/>
-                <SearchOption title='Level' 
-                optionDropdown={levelDropdown} 
+                options={["option1", "option2"]}
+              />
+              <SearchOption
+                title="Level"
+                optionDropdown={levelDropdown}
                 setOptionDropdown={setLevelDropdown}
-                options={['option1', 'option2']}/>
-                <SearchOption title='Availability' 
-                optionDropdown={availabilityDropdown} 
+                options={["option1", "option2"]}
+              />
+              <SearchOption
+                title="Availability"
+                optionDropdown={availabilityDropdown}
                 setOptionDropdown={setAvailabilityDropdown}
-                options={['option1', 'option2']}/>
-                <SearchOption title='Language' 
-                optionDropdown={languageDropdown} 
+                options={["option1", "option2"]}
+              />
+              <SearchOption
+                title="Language"
+                optionDropdown={languageDropdown}
                 setOptionDropdown={setLanguageDropdown}
-                options={['option1', 'option2']}/>
+                options={["option1", "option2"]}
+              />
             </div>
           </div>
         </div>
