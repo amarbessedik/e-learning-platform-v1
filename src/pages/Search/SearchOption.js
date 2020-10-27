@@ -2,24 +2,45 @@ import React from "react";
 import "./Search.css";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
-const SearchOption = ({ title, optionDropdown, setOptionDropdown, options }) => {
-
+const SearchOption = ({
+  title,
+  optionDropdown,
+  setOptionDropdown,
+  options,
+  resetDropdown,
+  addOption,
+  removeOption,
+}) => {
   return (
-    <div className="subject__container option__wrapper">
+    <div
+      // onBlur={() => setOptionDropdown(false)}
+      onChange={resetDropdown}
+      className="subject__container option__wrapper"
+    >
       <button onClick={() => setOptionDropdown(!optionDropdown)}>
         <span>{title}</span> <ArrowDropDownIcon />
       </button>
       <div
-        // onBlur={() => setOptionDropdown(false)}
-        style={{ display: optionDropdown ? "block" : "none" }}
+        style={{ display: optionDropdown ? "block" : "none", zIndex: 999 }}
         className="option__dropdown"
       >
         <ul>
-          {options.map((option) => {
+          {options.map((option, index) => {
             return (
-              <li>
-                <input type="checkbox" name="checkbox" id="checkbox" />
-                <span>{option.subject}</span>
+              <li key={index}>
+                <input
+                  onClick={() => {
+                    console.log('checked? >>> ',document.getElementById(option.id).checked);
+                    setOptionDropdown(true);
+                    document.getElementById(option.id).checked
+                      ? addOption(option)
+                      : removeOption(option);
+                  }}
+                  type="checkbox"
+                  name="checkbox"
+                  id={option.id}
+                />
+                <span className='option__title'>{option.title}</span> <span className='option__number'>{option.number}</span>
               </li>
             );
           })}
