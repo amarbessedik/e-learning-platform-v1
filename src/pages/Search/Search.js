@@ -9,6 +9,8 @@ import {
   availabilities,
   languages,
 } from "./data";
+import Courses from "./Courses/Courses";
+import Programs from "./Programs/Programs";
 
 const Search = () => {
   const [subjectDropdown, setSubjectDropdown] = useState(false);
@@ -89,21 +91,21 @@ const Search = () => {
     document.getElementById(optionToRemove.id).checked = false;
   };
 
-  const handleAll = () =>{
-      setAllActive(true);
-      setCoursesActive(false);
-      setProgramsActive(false);
-  }
-  const handleCourses = () =>{
-     setAllActive(false);
-     setCoursesActive(true);
-     setProgramsActive(false);
-  }
-  const handlePrograms = () =>{
-   setAllActive(false);
-   setCoursesActive(false);
-   setProgramsActive(true);
-  }
+  const handleAll = () => {
+    setAllActive(true);
+    setCoursesActive(false);
+    setProgramsActive(false);
+  };
+  const handleCourses = () => {
+    setAllActive(false);
+    setCoursesActive(true);
+    setProgramsActive(false);
+  };
+  const handlePrograms = () => {
+    setAllActive(false);
+    setCoursesActive(false);
+    setProgramsActive(true);
+  };
 
   return (
     <div className="search__page">
@@ -217,7 +219,41 @@ const Search = () => {
           </div>
         </div>
       </div>
-      <div className="search__results">all - courses - programs</div>
+      <div className="search__results">
+        <div
+          className="all__container"
+          style={{ display: allActive ? "flex" : "none" }}
+        >
+          <br/>  
+          <h1>All</h1>
+          <br />
+          <h2>Courses</h2>
+          <br />
+          <Courses />
+          <br />
+          <h2>Programs</h2>
+          <br />
+          <Programs />
+        </div>
+        <div
+          className="courses__container"
+          style={{ display: coursesActive ? "flex" : "none" }}
+        >
+          <br />
+          <h1>Courses</h1>
+          <br />
+          <Courses />
+        </div>
+        <div
+          className="programs__container"
+          style={{ display: programsActive ? "flex" : "none" }}
+        >
+          <br />
+          <h1>Programs</h1>
+          <br />
+          <Programs />
+        </div>
+      </div>
     </div>
   );
 };

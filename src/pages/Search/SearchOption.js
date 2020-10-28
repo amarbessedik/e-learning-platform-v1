@@ -13,7 +13,6 @@ const SearchOption = ({
 }) => {
   return (
     <div
-      // onBlur={() => setOptionDropdown(false)}
       onChange={resetDropdown}
       className="subject__container option__wrapper"
     >

@@ -1,6 +1,6 @@
 .search__page {
   min-height: 60vh;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 .search__criteria__wrapper {
   background: #1a337b;
@@ -90,7 +90,7 @@
   /* justify-content: space-between; */
   align-items: center;
   /* margin: auto; */
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 #checkbox {
   display: block;
@@ -100,65 +100,144 @@
   /* border: 1px solid red; */
   display: inline-block;
   /* flex: 1; */
-  margin-left: 5px
+  margin-left: 5px;
 }
 .option__dropdown ul li input {
-    margin-bottom: 0px;
-    padding: 1px;
-    line-height: 1.5rem;
-    width: fit-content
+  margin-bottom: 0px;
+  padding: 1px;
+  line-height: 1.5rem;
+  width: fit-content;
 }
-.selected__option{
-    display: inline-block;
-    border: 1px solid #fff;
-    background: rgb(143, 162, 196);
-    padding: 2px 8px;
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 25px; 
+.selected__option {
+  display: inline-block;
+  border: 1px solid #fff;
+  background: rgb(143, 162, 196);
+  padding: 2px 8px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 25px;
 }
-.selected__option button{
-    border: none;
-    border-radius: 50%;
-    background: transparent;
-    color: red;
-    box-sizing: content-box;
-    padding: 2px 5px;
+.selected__option button {
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: red;
+  box-sizing: content-box;
+  padding: 2px 5px;
 }
-.selected__option button:hover{
-    background: #fff;
-    cursor: pointer;
-    
+.selected__option button:hover {
+  background: #fff;
+  cursor: pointer;
 }
-.option__title{
-    flex: 1;
+.option__title {
+  flex: 1;
 }
-.option__number{
+.option__number {
   background: #092fa3;
   color: #fff;
   width: 35px;
   padding: 2px;
   border-radius: 10px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   text-align: center;
 }
-.filter__btns__wrapper{
-    /* border: 1px solid #aaa; */
-    flex: 1;
+.filter__btns__wrapper {
+  /* border: 1px solid #aaa; */
+  flex: 1;
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-end;
+}
+.filter__btns__wrapper button {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin-bottom: -3px;
+}
+.filter__btns__wrapper button {
+  margin-right: 5px;
+}
+.filter__btns__wrapper button:focus {
+  outline: none;
+}
+/* Search results begin*/
+.search__results {
+  width: 85vw;
+  margin: 1px auto;
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+/* Search results end */
+
+/* all__container begin */
+.all__container,
+.courses__container,
+.programs__container {
+  display: flex;
+  flex-direction: column;
+}
+/* all__container end */
+.courses__wrapper,
+.programs__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.courses__wrapper > *,
+.programs__wrapper > * {
+  width: 22%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px -2px rgb(133, 131, 131);
+}
+.little__card__wrapper {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.little__card__wrapper > * {
+  flex: 1;
+  overflow: hidden;
+}
+.little__card__header img {
+  width: 100%;
+  height: 90%;
+  background-size: 100%;
+  object-fit: fill;
+  overflow: hidden;
+}
+.little__card__body__wrapper{
     display: flex;
-    /* justify-content: center; */
-    align-items: flex-end;
+    flex-direction: column;
+    margin: 5px 10px;
 }
-.filter__btns__wrapper button{
-    width: 100px;
-    padding: 10px;
-    border: 1px solid #fff;
-    cursor: pointer;
-    margin-bottom: -3px;
+.little__card__body{
+    flex: 1;
 }
-.filter__btns__wrapper button{
-  margin-right: 5px
+.little__card__footer{
+    border-top: 5px solid rgba(190, 123, 168, 0.877);
+    padding: 5px;
+    background: rgba(241, 147, 210, 0.164);
+    border-radius: 5px;
 }
-.filter__btns__wrapper button:focus{
-    outline: none;
+.little__card__body h4{
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 900px){
+.courses__wrapper > *,
+.programs__wrapper > * {
+  width: 32%;}
+}
+@media only screen and (max-width: 700px){
+.courses__wrapper > *,
+.programs__wrapper > * {
+  width: 45%;}
+}
+@media only screen and (max-width: 500px){
+.courses__wrapper > *,
+.programs__wrapper > * {
+  width: 80%;}
 }
