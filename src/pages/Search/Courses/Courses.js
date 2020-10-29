@@ -1,13 +1,14 @@
 import React from 'react';
 import Card from '../Card';
-import {_courses} from '../data'
+// import {_courses} from '../data';
 
-const Courses = () => {
+const Courses = ({courses}) => {
     return (
       <div className="courses__wrapper">
         {/* img, title, description, footer  */}
-        {_courses.map(({title, img}) => (
+        {courses.map(({title, img}, index) => (
           <Card
+            key={index}
             img={img}
             title={title}
             description="desc"

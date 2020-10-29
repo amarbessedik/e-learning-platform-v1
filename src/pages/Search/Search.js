@@ -8,6 +8,8 @@ import {
   levels,
   availabilities,
   languages,
+  _courses,
+  _programs,
 } from "./data";
 import Courses from "./Courses/Courses";
 import Programs from "./Programs/Programs";
@@ -23,6 +25,9 @@ const Search = () => {
   const [allActive, setAllActive] = useState(true);
   const [coursesActive, setCoursesActive] = useState(false);
   const [programsActive, setProgramsActive] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [coursesDB, setCoursesDB] = useState(_courses);
+  const [programsDB, setProgramsDB] = useState(_programs);
 
   const resetDropdown = () => {
     setSubjectDropdown(false);
@@ -100,21 +105,48 @@ const Search = () => {
     setAllActive(false);
     setCoursesActive(true);
     setProgramsActive(false);
+    setCoursesDB(_courses);
   };
   const handlePrograms = () => {
     setAllActive(false);
     setCoursesActive(false);
     setProgramsActive(true);
+    setProgramsDB(_programs);
   };
 
+  const handleChange = (e) => {
+      e.preventDefault();
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newCourses = [];
+    coursesDB.map((entry) =>{
+        if (entry.title.toLowerCase().includes(searchTerm.toLowerCase()))
+          newCourses.push(entry);
+    return newCourses;      
+    }
+    );
+    setCoursesDB(newCourses);
+    const newPrograms = [];
+    programsDB.map((entry) =>{
+      if (entry.title.toLowerCase().includes(searchTerm.toLowerCase()))
+        newPrograms.push(entry);
+    return newPrograms;       
+    });
+    setProgramsDB(newPrograms);
+    e.target.value = ''
+  };
   return (
     <div className="search__page">
       <div className="search__criteria__wrapper">
         <div className="search__criteria">
           <div className="search__box">
             <div className="input__wrapper">
-              <form className="course__search__form">
+              <form onSubmit={handleSubmit} className="course__search__form">
                 <input
+                  onChange={handleChange}
                   type="text"
                   placeholder="Search Courses and Programs ...."
                 />
@@ -224,16 +256,16 @@ const Search = () => {
           className="all__container"
           style={{ display: allActive ? "flex" : "none" }}
         >
-          <br/>  
+          <br />
           <h1>All</h1>
           <br />
           <h2>Courses</h2>
           <br />
-          <Courses />
+          <Courses courses={coursesDB} />
           <br />
           <h2>Programs</h2>
           <br />
-          <Programs />
+          <Programs programs={programsDB} />
         </div>
         <div
           className="courses__container"
@@ -242,7 +274,7 @@ const Search = () => {
           <br />
           <h1>Courses</h1>
           <br />
-          <Courses />
+          <Courses courses={coursesDB} />
         </div>
         <div
           className="programs__container"
@@ -251,7 +283,7 @@ const Search = () => {
           <br />
           <h1>Programs</h1>
           <br />
-          <Programs />
+          <Programs programs={programsDB} />
         </div>
       </div>
     </div>
