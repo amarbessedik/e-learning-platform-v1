@@ -183,7 +183,12 @@
 .courses__wrapper,
 .programs__wrapper {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: center; */
+  overflow-x: scroll;
+}
+.courses__wrapper>*:not(:last-child),
+.programs__wrapper>*:not(:last-child){
+  margin-right: 20px
 }
 .courses__wrapper > *,
 .programs__wrapper > * {

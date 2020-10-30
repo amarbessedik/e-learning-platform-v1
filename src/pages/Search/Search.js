@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Search.css";
 import SearchOption from "./SearchOption";
 import {
@@ -29,6 +29,28 @@ const Search = () => {
   const [coursesDB, setCoursesDB] = useState(_courses);
   const [programsDB, setProgramsDB] = useState(_programs);
 
+  useEffect(() => {
+    filterArray(coursesDB, options);
+    filterArray(programsDB, options);
+  }, [options, coursesDB, programsDB]);
+
+  const filterArray = (array, searchOptions) =>{
+      if(searchOptions.length){
+          const filtredArray = [];
+      for(let i = 0; i < searchOptions.length; i++){
+          console.log("searchOptions[i] >>> ", searchOptions[i]);
+        for(let j = 0; j < array.length; j++){
+            if(array[j].title.toLowerCase().includes(searchOptions[i])){
+              filtredArray.push(array[j]);
+              break;
+            }
+        }
+      }
+      return filtredArray;
+      }
+
+      return [];
+  }
   const resetDropdown = () => {
     setSubjectDropdown(false);
     setPartnerDropdown(false);
@@ -136,7 +158,7 @@ const Search = () => {
     return newPrograms;       
     });
     setProgramsDB(newPrograms);
-    e.target.value = ''
+    setSearchTerm('');
   };
   return (
     <div className="search__page">
@@ -146,6 +168,7 @@ const Search = () => {
             <div className="input__wrapper">
               <form onSubmit={handleSubmit} className="course__search__form">
                 <input
+                  value={searchTerm}
                   onChange={handleChange}
                   type="text"
                   placeholder="Search Courses and Programs ...."
