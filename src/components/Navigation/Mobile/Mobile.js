@@ -59,12 +59,12 @@ const Mobile = () => {
           <div className={styles.nav__links__container}>
             <ul>
               <li>
-                <Link className={styles.nav__link} to="/">
+                <Link className={styles.nav__link} to="/search">
                   Courses
                 </Link>
               </li>
               <li>
-                <Link className={styles.nav__link} to="/">
+                <Link className={styles.nav__link} to="/search">
                   Programs
                 </Link>
               </li>
