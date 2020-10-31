@@ -45,7 +45,7 @@ const Desktop = () => {
           onClick={handleCourses}
           onBlur={resetDropdown}
         >
-          <Link style={courses ? { color: "#fff" } : null} to="/">
+          <Link style={courses ? { color: "#fff" } : null} to="/search">
             <span>Courses</span>
             <ArrowDropDownIcon />
           </Link>
@@ -55,7 +55,7 @@ const Desktop = () => {
           onClick={handleDegrees}
           onBlur={resetDropdown}
         >
-          <Link style={degrees ? { color: "#fff" } : null} to="/">
+          <Link style={degrees ? { color: "#fff" } : null} to="/search">
             <span>Programs</span>
             <ArrowDropDownIcon />
           </Link>
