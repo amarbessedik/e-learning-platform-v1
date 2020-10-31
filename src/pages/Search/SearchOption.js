@@ -29,7 +29,7 @@ const SearchOption = ({
               <li key={index}>
                 <input
                   onClick={() => {
-                    console.log('checked? >>> ',document.getElementById(option.id).checked);
+                    // console.log('checked? >>> ',document.getElementById(option.id).checked);
                     setOptionDropdown(true);
                     document.getElementById(option.id).checked
                       ? addOption(option)

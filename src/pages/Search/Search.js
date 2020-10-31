@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Search.css";
 import SearchOption from "./SearchOption";
+import FilterBTN from "./FilterBTN/FilterBTN";
 import {
   subjects,
   partners,
@@ -30,27 +31,33 @@ const Search = () => {
   const [programsDB, setProgramsDB] = useState(_programs);
 
   useEffect(() => {
-    filterArray(coursesDB, options);
-    filterArray(programsDB, options);
+    setCoursesDB(filterDB(coursesDB, options));
+    setProgramsDB(filterDB(programsDB, options));
   }, [options, coursesDB, programsDB]);
 
-  const filterArray = (array, searchOptions) =>{
-      if(searchOptions.length){
-          const filtredArray = [];
-      for(let i = 0; i < searchOptions.length; i++){
-          console.log("searchOptions[i] >>> ", searchOptions[i]);
-        for(let j = 0; j < array.length; j++){
-            if(array[j].title.toLowerCase().includes(searchOptions[i])){
-              filtredArray.push(array[j]);
-              break;
-            }
+  useEffect(() => {
+    if (!options.length) {
+      setCoursesDB(_courses);
+      setProgramsDB(_programs);
+    }
+  }, [options]);
+
+  const filterDB = (db, searchOptions) => {
+    if (searchOptions.length) {
+      const filtredDB = [];
+      for (let i = 0; i < searchOptions.length; i++) {
+        for (let j = 0; j < db.length; j++) {
+          if (db[j].title.toLowerCase().includes(searchOptions[i])) {
+            filtredDB.push(db[j]);
+            break;
+          }
         }
       }
-      return filtredArray;
-      }
-
-      return [];
-  }
+      return filtredDB;
+    } else {
+      return db;
+    }
+  };
   const resetDropdown = () => {
     setSubjectDropdown(false);
     setPartnerDropdown(false);
@@ -128,37 +135,38 @@ const Search = () => {
     setCoursesActive(true);
     setProgramsActive(false);
     setCoursesDB(_courses);
+    setOptions([]);
   };
   const handlePrograms = () => {
     setAllActive(false);
     setCoursesActive(false);
     setProgramsActive(true);
     setProgramsDB(_programs);
+    setOptions([]);
   };
 
   const handleChange = (e) => {
-      e.preventDefault();
+    e.preventDefault();
     setSearchTerm(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newCourses = [];
-    coursesDB.map((entry) =>{
-        if (entry.title.toLowerCase().includes(searchTerm.toLowerCase()))
-          newCourses.push(entry);
-    return newCourses;      
-    }
-    );
+    coursesDB.map((entry) => {
+      if (entry.title.toLowerCase().includes(searchTerm.toLowerCase()))
+        newCourses.push(entry);
+      return newCourses;
+    });
     setCoursesDB(newCourses);
     const newPrograms = [];
-    programsDB.map((entry) =>{
+    programsDB.map((entry) => {
       if (entry.title.toLowerCase().includes(searchTerm.toLowerCase()))
         newPrograms.push(entry);
-    return newPrograms;       
+      return newPrograms;
     });
     setProgramsDB(newPrograms);
-    setSearchTerm('');
+    setSearchTerm("");
   };
   return (
     <div className="search__page">
@@ -244,71 +252,53 @@ const Search = () => {
             })}
           </div>
           <div className="filter__btns__wrapper">
-            <button
-              onClick={handleAll}
-              style={{
-                background: allActive ? "#fff" : "inherit",
-                color: allActive ? "#000" : "#fff",
-              }}
-            >
-              All
-            </button>
-            <button
-              onClick={handleCourses}
-              style={{
-                background: coursesActive ? "#fff" : "inherit",
-                color: coursesActive ? "#000" : "#fff",
-              }}
-            >
-              Courses
-            </button>
-            <button
-              onClick={handlePrograms}
-              style={{
-                background: programsActive ? "#fff" : "inherit",
-                color: programsActive ? "#000" : "#fff",
-              }}
-            >
-              Programs
-            </button>
+            <FilterBTN title="All" condition={allActive} callback={handleAll} />
+            <FilterBTN
+              title="Courses"
+              condition={coursesActive}
+              callback={handleCourses}
+            />
+            <FilterBTN
+              title="Programs"
+              condition={programsActive}
+              callback={handlePrograms}
+            />
           </div>
         </div>
       </div>
-      <div className="search__results">
-        <div
-          className="all__container"
-          style={{ display: allActive ? "flex" : "none" }}
-        >
-          <br />
-          <h1>All</h1>
-          <br />
-          <h2>Courses</h2>
-          <br />
-          <Courses courses={coursesDB} />
-          <br />
-          <h2>Programs</h2>
-          <br />
-          <Programs programs={programsDB} />
+      {!coursesDB.length && !programsDB.length ? (
+        <div className="search__no__results">
+          <h1>No results found for your search criteria</h1>
         </div>
-        <div
-          className="courses__container"
-          style={{ display: coursesActive ? "flex" : "none" }}
-        >
-          <br />
-          <h1>Courses</h1>
-          <br />
-          <Courses courses={coursesDB} />
+      ) : (
+        <div className="search__results">
+          <div
+            className="all__container"
+            style={{ display: allActive ? "flex" : "none" }}
+          >
+            <h1>All</h1>
+            <h2>Courses</h2>
+            <Courses courses={coursesDB} />
+            <br />
+            <h2>Programs</h2>
+            <Programs programs={programsDB} />
+          </div>
+          <div
+            className="courses__container"
+            style={{ display: coursesActive ? "flex" : "none" }}
+          >
+            <h1>Courses</h1>
+            <Courses courses={coursesDB} />
+          </div>
+          <div
+            className="programs__container"
+            style={{ display: programsActive ? "flex" : "none" }}
+          >
+            <h1>Programs</h1>
+            <Programs programs={programsDB} />
+          </div>
         </div>
-        <div
-          className="programs__container"
-          style={{ display: programsActive ? "flex" : "none" }}
-        >
-          <br />
-          <h1>Programs</h1>
-          <br />
-          <Programs programs={programsDB} />
-        </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -61,25 +61,49 @@ export const _courses = [
     title: "How to Learn Online",
     img:
       "https://prod-discovery.edx-cdn.org/media/course/image/0e575a39-da1e-4e33-bb3b-e96cc6ffc58e-8372a9a276c1.png",
-    description: 'desc',  
+    description: "edX",
   },
   {
     title: "Programming for Everybody (Getting Started With Python)",
     img:
       "https://prod-discovery.edx-cdn.org/media/course/image/911175d0-6724-4276-a058-c7b052773dd1-aba3108f3ab9.png",
-    description: 'desc',  
+    description: "MichiganX",
   },
   {
     title: "CS50's Introduction to Computer Science",
     img:
       "https://prod-discovery.edx-cdn.org/media/course/image/da1b2400-322b-459b-97b0-0c557f05d017-3b9fb73b5d5d.jpg",
-    description: 'desc',  
+    description: "HarvardX",
   },
   {
     title: "The Analytics Edge",
     img:
       "https://prod-discovery.edx-cdn.org/media/course/image/ff1df27b-3c97-42ee-a9b3-e031ffd41a4f-958fa38a4a59.jpg",
-    description: 'desc',  
+    description: "MITx",
+  },
+  {
+    title: "The Foundations of Happiness at Work",
+    img:
+      "https://prod-discovery.edx-cdn.org/media/course/image/a00ec61d-e2db-45c8-92c9-4727056c2f4a-d24963f66dbe.jpg",
+    description: "BerkeleyX",
+  },
+  {
+    title: "Introduction to Linux",
+    img:
+      "https://prod-discovery.edx-cdn.org/media/course/image/5a631d1c-cb20-4cfc-9b49-1cc9c8fc981e-5949e438d0ed.png",
+    description: "LinuxFoundationX",
+  },
+  {
+    title: "Introduction to Linux",
+    img:
+      "https://prod-discovery.edx-cdn.org/media/course/image/1a666720-9507-4ea7-992e-8a956c83d775-d70e7856c814.png",
+    description: "W3Cx",
+  },
+  {
+    title: "Hollywood: History, Industry, Art",
+    img:
+      "https://prod-discovery.edx-cdn.org/media/course/image/f1a02084-6bf9-4242-bfdf-d6be7dc81501-4876b86f11b9.jpg",
+    description: "PennX",
   },
 ];
 
@@ -100,6 +124,18 @@ export const _programs = [
     title: "Data Science",
     img:
       "https://prod-discovery.edx-cdn.org/media/programs/card_images/482dee71-e4b9-4b42-a47b-3e16bb69e8f2-cc94a82dea0f.jpg",
+    description: "desc",
+  },
+  {
+    title: "Design Thinking",
+    img:
+      "https://prod-discovery.edx-cdn.org/media/programs/card_images/9b729425-b524-4344-baaa-107abdee62c6-5b12ba753ecc.jpg",
+    description: "desc",
+  },
+  {
+    title: "Design Thinking",
+    img:
+      "https://prod-discovery.edx-cdn.org/media/programs/card_images/9b729425-b524-4344-baaa-107abdee62c6-5b12ba753ecc.jpg",
     description: "desc",
   },
   {

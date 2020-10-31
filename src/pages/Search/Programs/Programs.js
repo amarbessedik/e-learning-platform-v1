@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../Card";
-// import { _programs } from "../data";
 
 const Programs = ({programs}) => {
   return (
