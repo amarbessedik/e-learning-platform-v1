@@ -7,6 +7,7 @@
 }
 .hero__wrapper{
   background-image: linear-gradient(to right, #231F5E, #FFF);
+  background-image: linear-gradient(to right, #92DEEA, #FFF);
 }
 .subjects__wrapper{ 
   width: 85vw;

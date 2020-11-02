@@ -5,23 +5,25 @@
   overflow: hidden;
   border-top: none;
   margin-top: 20px;
-  box-shadow: 0 0 8px -4px #3E3A72;
+  box-shadow: 0 0 8px -4px #3b3b42;
 }
 .subject__card:hover{
-  box-shadow: 0 0 8px -2px #3E3A72;
+  box-shadow: 0 0 8px -2px #3e3d46;
 }
 .card__header:hover {
-  background: #065683;
+  background: #92DEEA;
+  color: #333;
 }
 .card__header {
   display: flex;
-  background: #3E3A72;
+  background: #92DEEA;
+  background: #18191B;
   color: #fff;
   padding: 10px;
 }
 .card__icon {
   flex: 1;
-  color: #e31a00;
+  color: #05e0e7;
   display: flex;
   align-items: center;
   justify-content: center;

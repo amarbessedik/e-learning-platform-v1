@@ -9,8 +9,8 @@ const Hero = () => {
         <div className="hero">
           <div className="hero__title">
             <h2>
-              Access 2000+ Online Courses, Certificates, Online Degrees from
-              100+ Institutions. <br />
+              Online Courses, Certificates <br />
+              &amp; Online Degrees
             </h2>
             <Link to="/" className="hero__btn">
               Start Today

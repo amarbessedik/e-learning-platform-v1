@@ -9,7 +9,7 @@
 }
 .hero__title h2{
     color: var(--blueColor);
-    color: #fff;
+    color: #444;
     padding-top: 20px;
     line-height: 1.1;
     max-width: 600px;

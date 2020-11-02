@@ -27,7 +27,7 @@
 }
 .course__search__form {
   /* border: 1px solid red; */
-  width: 45vw;
+  width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,9 +180,9 @@
   flex-direction: column;
   flex: 1;
 }
-.search__no__results h1{
-    margin: 30px auto;
-    color: tomato
+.search__no__results h1 {
+  margin: 30px auto;
+  color: tomato;
 }
 /* Search results end */
 
@@ -195,13 +195,13 @@
 }
 .all__container h1,
 .courses__container h1,
-.programs__container h1{
+.programs__container h1 {
   margin: 20px 0;
-  color: tomato
+  color: tomato;
 }
-.all__container h2{
-    margin: 15px 0;
-    color: #888;
+.all__container h2 {
+  margin: 15px 0;
+  color: #888;
 }
 /* all__container end */
 .courses__wrapper,
@@ -249,30 +249,49 @@
 .little__card__body {
   flex: 1;
 }
-.little__card__body h4{
-    font-size: .9rem;
-    font-weight: 400;
-    color: #222;
+.little__card__body h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #222;
 }
 .little__card__footer {
   padding: 2px;
   border-radius: 3px;
-  font-size: .8rem;
-  color: #aaa
+  font-size: 0.8rem;
+  color: #aaa;
 }
 .little__card__body p {
   font-weight: 400;
   margin-top: 15px;
-  font-size: .8rem; 
+  font-size: 0.8rem;
   color: #aaa;
-  letter-spacing: .03rem;
+  letter-spacing: 0.03rem;
   /* border-bottom: 2px solid #ccc; */
-  width: fit-content
+  width: fit-content;
 }
 
 @media only screen and (max-width: 900px) {
   .search__criteria,
   .search__results {
     width: 95vw;
+  }
+  .course__search__form {
+    width: 65vw;
+  }
+  .option__wrapper button {
+      padding: 0px 2px;
+      font-size: .8rem;
+      margin-right: 3px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .option__wrapper button {
+      padding: 0px;
+      padding-left: 2px;
+      font-size: .75rem;
+      margin-right: 3px;
+  }
+  .course__search__form {
+    width: 85vw;
   }
 }
